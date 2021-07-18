@@ -8,15 +8,24 @@
     <title> @yield('title') </title>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href=" {{asset('app/css/product.css')}} ">
+    <link rel="stylesheet" href=" {{asset('app/css/product-detail.css')}} ">
+    <link rel="stylesheet" href=" {{asset('app/css/header.css')}} ">
+
 </head>
 <body>
 
     {{View::make('layouts.header')}}
-       @yield('content')
-    {{View::make('layouts.footer')}}
+
+        @yield('content')
+
+     {{View::make('layouts.footer')}}
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+
+
 </body>
 <!-- page Scripts code -->
     @yield('scripts')
