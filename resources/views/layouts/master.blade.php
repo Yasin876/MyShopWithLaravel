@@ -11,6 +11,7 @@
     <link rel="stylesheet" href=" {{asset('app/css/product.css')}} ">
     <link rel="stylesheet" href=" {{asset('app/css/product-detail.css')}} ">
     <link rel="stylesheet" href=" {{asset('app/css/header.css')}} ">
+    <link rel="stylesheet" href=" {{asset('app/css/search.css')}} ">
 
 </head>
 <body>

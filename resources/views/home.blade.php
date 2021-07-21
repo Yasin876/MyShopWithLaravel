@@ -12,11 +12,14 @@
                     <div class="caption">
                         <h6><a href="#"> {{$product->name}} </a></h6><span class="price sale"> ${{$product->price}} </span>
                     </div>
-                    <button class="btn btn-sm btn-primary mb-2">Add to cart</button>
+                   <form action="{{route('addtocart')}}" method="POST">
+                     @csrf
+                     <input type="hidden" name="product_id" value="{{$product->id}}">
+                     <button type="submit" class="btn btn-sm btn-primary mb-2">Add to cart</button>
+                   </form>
                 </div>
             </div>
         @endforeach
-
     </div>
   </div>
   @endsection
