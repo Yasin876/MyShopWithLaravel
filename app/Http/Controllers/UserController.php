@@ -23,4 +23,9 @@ class UserController extends Controller
            return redirect()->route('home');
         }
     }
+
+    public function logout(Request $request){
+        $request->session()->forget('user');
+        return redirect()->route('home');
+    }
 }

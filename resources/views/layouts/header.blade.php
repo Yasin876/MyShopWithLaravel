@@ -47,7 +47,12 @@
                 </div>
 
                 <div class="float-end">
-                    <a href="{{route('login')}}">   <button type="button" class="btn btn-light mt-2 float-left  btn-sm">Login</button> </a>
+                    @if(session()->has('user'))
+                        <a href="{{route('logout')}}">   <button type="button" class="btn btn-light mt-2 float-left  btn-sm">Logout</button> </a>
+                    @else
+                        <a href="{{route('login')}}">   <button type="button" class="btn btn-light mt-2 float-left  btn-sm">Login</button> </a>
+                    @endif
+
                 </div>
 
             </div>

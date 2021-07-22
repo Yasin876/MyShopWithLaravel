@@ -29,10 +29,20 @@ class CartController extends Controller
     }
 
     static function countProduct(){
-       $userId = Session::get('user')['id'];
-       $result = Cart::where('user_id',$userId)->count();
-       return $result;
+      if(Session::has('user')){
+          $userId = Session::get('user')['id'];
+          $result = Cart::where('user_id',$userId)->count();
+          return $result;
+      }else{
+          return 0;
+      }
     }
 
-   
+    public function showOrders(){
+        $user = Session::get('user')['id'];
+        $result = Cart::where('user_id',$user)->get();
+        return $result;
+    }
+
+
 }

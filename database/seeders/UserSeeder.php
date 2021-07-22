@@ -24,19 +24,19 @@ class UserSeeder extends Seeder
             'password'=>Hash::make('1234'),
         ]); */
 
-        /* $user1 = User::create([
+          $user1 = User::create([
             'name'=>'Edward Snowden',
             'email'=>'snowden@gmail.com',
             'password'=>Hash::make('1234'),
-        ]); */
+        ]);
 
-       //$user1->save();
+        $user1->save();
 
-       $user2 = User::create([
+     /*  $user2 = User::create([
            'name'=>'Yasin Cmc',
            'email'=>'yasin@yandex.com',
            'password'=>Hash::make('1234'),
        ]);
-       $user2->save();
+       $user2->save(); */
     }
 }
