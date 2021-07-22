@@ -39,7 +39,7 @@
 
             <div class="col-lg-2 col-md-3 cart-login">
                 <div class="float-end cart mt-2 float-right">
-                    <a href="#">
+                    <a href=" {{route('card')}} ">
                         <span class="number"> {{$totalCount}} </span>
                         <img class="img-fluid " src=" {{asset('app/images/cart.png')}} " alt="cart" />
                         <span>Cart</span>

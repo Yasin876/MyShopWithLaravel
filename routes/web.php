@@ -28,7 +28,8 @@ Route::get('/',[ProductController::class,'index'])->name('home');
 Route::get('/product/detail/{id}',[ProductController::class,'show_product_detail'])->name('productdetail');
 Route::get('/product/search',[ProductController::class,'search'])->name('search');
 Route::post('/product/add_to_card',[CartController::class,'add_to_cart'])->name('addtocart');
-Route::get('/orders',[CartController::class,'showOrders'])->name('orders');
+Route::get('/card',[CartController::class,'get_cart_list'])->name('card');
+Route::get('/cart/remove/{id}',[CartController::class,'remove_item'])->name('removecart');
 
 
 
